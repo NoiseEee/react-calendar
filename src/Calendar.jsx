@@ -547,7 +547,11 @@ export default class Calendar extends Component {
       prevAriaLabel,
       prevLabel,
       showDoubleView,
+      showToday,
+      todayButtonHandler,
+      todayLabel,
     } = this.props;
+
 
     return (
       <Navigation
@@ -570,6 +574,9 @@ export default class Calendar extends Component {
         prevLabel={prevLabel}
         setActiveStartDate={this.setActiveStartDate}
         showDoubleView={showDoubleView}
+        showToday={showToday}
+        todayButtonHandler={todayButtonHandler}
+        todayLabel={todayLabel}
         view={view}
         views={views}
       />
@@ -661,6 +668,7 @@ Calendar.propTypes = {
   showFixedNumberOfWeeks: PropTypes.bool,
   showNavigation: PropTypes.bool,
   showNeighboringMonth: PropTypes.bool,
+  showToday: PropTypes.bool,
   showWeekNumbers: PropTypes.bool,
   tileClassName: PropTypes.oneOfType([
     PropTypes.func,
@@ -671,6 +679,8 @@ Calendar.propTypes = {
     PropTypes.node,
   ]),
   tileDisabled: PropTypes.func,
+  todayButtonHandler: PropTypes.func,
+  todayLabel: PropTypes.string,
   value: isLooseValue,
   view: isView,
 };

@@ -35,6 +35,10 @@ export default function Navigation({
   prevAriaLabel,
   prevLabel,
   setActiveStartDate,
+  showToday,
+  todayAriaLabel,
+  todayButtonHandler,
+  todayLabel,
   view,
   views,
 }) {
@@ -158,6 +162,16 @@ export default function Navigation({
           {next2Label}
         </button>
       )}
+      {view === 'month' && showToday && (
+        <button
+          aria-label={todayAriaLabel}
+          className="todayButton"
+          onClick={todayButtonHandler}
+          type="button"
+        >
+          {todayLabel}
+        </button>
+      )}
     </div>
   );
 }
@@ -173,6 +187,8 @@ Navigation.defaultProps = {
   prev2Label: '«',
   prevAriaLabel: '',
   prevLabel: '‹',
+  todayLabel: 'Today',
+  todayAriaLabel: '',
 };
 
 Navigation.propTypes = {
@@ -193,6 +209,10 @@ Navigation.propTypes = {
   prevAriaLabel: PropTypes.string,
   prevLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   setActiveStartDate: PropTypes.func.isRequired,
+  showToday: PropTypes.bool,
+  todayAriaLabel: PropTypes.string,
+  todayButtonHandler: PropTypes.func,
+  todayLabel: PropTypes.string,
   view: isView.isRequired,
   views: isViews.isRequired,
 };

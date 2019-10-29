@@ -1,13 +1,13 @@
 {
-  "name": "react-calendar",
-  "version": "2.19.2",
-  "description": "Ultimate calendar for your React app.",
+  "name": "@xmeasures/react-calendar",
+  "version": "2.20.0",
+  "description": "Ultimate calendar for your React app: forked from https://github.com/wojtekmaj/react-calendar",
   "main": "dist/entry.js",
   "source": "src/entry.js",
   "types": "./index.d.ts",
   "scripts": {
     "build": "yarn build-js && yarn copy-styles && yarn build-styles && yarn copy-types",
-    "build-js": "babel src -d dist --ignore **/__tests__,**/**/__tests__",
+    "build-js": "babel src -d dist --ignore **/*.spec.js,**/*.spec.jsx",
     "build-styles": "lessc ./dist/Calendar.less ./dist/Calendar.css",
     "clean": "rimraf dist",
     "copy-styles": "node ./copy-styles.js",
@@ -51,6 +51,10 @@
     },
     {
       "name": "JamieEgeberg"
+    },
+    {
+      "name": "Joshua Malinsky",
+      "email": "joshua@xmeasures.com"
     },
     {
       "name": "Justin Davis"

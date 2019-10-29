@@ -485,6 +485,9 @@ export default class Calendar extends Component {
       prev2Label,
       prevAriaLabel,
       prevLabel,
+      showToday,
+      todayButtonHandler,
+      todayLabel
     } = this.props;
     const { activeStartDate, view } = this.state;
 
@@ -507,6 +510,9 @@ export default class Calendar extends Component {
         prevAriaLabel={prevAriaLabel}
         prevLabel={prevLabel}
         setActiveStartDate={this.setActiveStartDate}
+        showToday={showToday}
+        todayButtonHandler={todayButtonHandler}
+        todayLabel={todayLabel}
         view={view}
         views={getLimitedViews(minDetail, maxDetail)}
       />
@@ -586,6 +592,7 @@ Calendar.propTypes = {
   showFixedNumberOfWeeks: PropTypes.bool,
   showNavigation: PropTypes.bool,
   showNeighboringMonth: PropTypes.bool,
+  showToday: PropTypes.bool,
   showWeekNumbers: PropTypes.bool,
   tileClassName: PropTypes.oneOfType([
     PropTypes.func,
@@ -596,6 +603,8 @@ Calendar.propTypes = {
     PropTypes.node,
   ]),
   tileDisabled: PropTypes.func,
+  todayButtonHandler: PropTypes.func,
+  todayLabel: PropTypes.string,
   value: PropTypes.oneOfType([
     PropTypes.string,
     isValue,

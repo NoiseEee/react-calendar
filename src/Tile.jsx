@@ -79,7 +79,7 @@ export default class Tile extends Component {
 
 Tile.propTypes = {
   ...tileProps,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   formatAbbr: PropTypes.func,
   maxDateTransform: PropTypes.func.isRequired,
   minDateTransform: PropTypes.func.isRequired,

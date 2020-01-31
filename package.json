@@ -1,7 +1,7 @@
 {
   "name": "@xmeasures/react-calendar",
   "version": "2.20.0",
-  "description": "Ultimate calendar for your React app: forked from https://github.com/wojtekmaj/react-calendar",
+  "description": "Ultimate calendar for your React app: forked from https://github.com/wojtekmaj/react-calendar. And this is a test push.",
   "main": "dist/entry.js",
   "source": "src/entry.js",
   "types": "./index.d.ts",

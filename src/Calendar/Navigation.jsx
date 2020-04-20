@@ -203,6 +203,20 @@ export default function Navigation({
   );
 }
 
+Navigation.defaultProps = {
+  formatMonthYear: defaultFormatMonthYear,
+  formatYear: defaultFormatYear,
+  navigationAriaLabel: '',
+  next2AriaLabel: '',
+  next2Label: '»',
+  nextAriaLabel: '',
+  nextLabel: '›',
+  prev2AriaLabel: '',
+  prev2Label: '«',
+  prevAriaLabel: '',
+  prevLabel: '‹',
+};
+
 Navigation.propTypes = {
   activeStartDate: PropTypes.instanceOf(Date).isRequired,
   drillUp: PropTypes.func.isRequired,

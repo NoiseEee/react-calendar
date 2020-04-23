@@ -1,9 +1,7 @@
 {
   "name": "@xmeasures/react-calendar",
-  "version": "2.20.0",
-  "description": "Ultimate calendar for your React app: forked from https://github.com/wojtekmaj/react-calendar",
-  "main": "dist/entry.js",
-  "source": "src/entry.js",
+  "version": "3.0.1",
+  "description": "Ultimate calendar for your React app: forked from https://github.com/wojtekmaj/react-calendar.",
   "types": "./index.d.ts",
   "main": "dist/umd/index.js",
   "module": "dist/esm/index.js",
@@ -58,6 +56,9 @@
     },
     {
       "name": "JamieEgeberg"
+    },
+    {
+      "name": "Joshua Malinsky"
     },
     {
       "name": "Justin Davis"
